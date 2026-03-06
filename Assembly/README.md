@@ -41,7 +41,7 @@ Think **Hangman**, but the casualties are programming languages.
 
 ### Game Over
 
-![Game Over](./src/assets/game-over.png)
+![Game Over](./src/assets/lose.png)
 
 ---
 
@@ -50,19 +50,6 @@ Think **Hangman**, but the casualties are programming languages.
 * **React**
 * **TypeScript (TSX)**
 * **Rspack**
-* HTML
-* CSS
-
----
-
-# 🚀 Setup
-
-Clone the repository:
-
-```bash
-git clone https://github.com/1arbitrary/assembly-endgame.git
-cd assembly-endgame
-```
 
 ---
 
