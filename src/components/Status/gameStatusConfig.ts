@@ -1,25 +1,25 @@
 export type progressObj = {
-  type: 'progress';
+  type: "progress";
   status: string;
   primaryText: string;
   secondaryText: string;
   backgroundColor: string;
-  display: 'flex' | 'none';
+  display: "flex" | "none";
 };
 
 export type farewellObj = {
-  type: 'farewell';
+  type: "farewell";
   backgroundColor: string;
   primaryText: string;
 };
 
 export function getFarewellObject(language: string): farewellObj {
   const farewellColors: string[] = [
-    '#7c5cff',
-    '#facc15',
-    '#fb923c',
-    '#38bdf8',
-    '#14b8a6',
+    "#7c5cff",
+    "#facc15",
+    "#fb923c",
+    "#38bdf8",
+    "#14b8a6",
   ];
 
   const options: string[] = [
@@ -42,7 +42,7 @@ export function getFarewellObject(language: string): farewellObj {
   );
 
   return {
-    type: 'farewell',
+    type: "farewell",
     backgroundColor: farewellColors[randomIndexForColor],
     primaryText: options[randomIndexForText],
   };
@@ -51,28 +51,28 @@ export function getFarewellObject(language: string): farewellObj {
 export function updateProgress(status: string): progressObj {
   const gameProgress: progressObj[] = [
     {
-      type: 'progress',
-      status: 'won',
-      primaryText: 'You Win!',
-      secondaryText: 'Well Done ! 🎉',
-      backgroundColor: 'seagreen',
-      display: 'flex',
+      type: "progress",
+      status: "won",
+      primaryText: "You Win!",
+      secondaryText: "Well Done ! 🎉",
+      backgroundColor: "seagreen",
+      display: "flex",
     },
     {
-      type: 'progress',
-      status: 'lost',
-      primaryText: 'Game Over!',
-      secondaryText: 'You Lose! Better Start Learning Assembly 😭',
-      backgroundColor: 'firebrick',
-      display: 'flex',
+      type: "progress",
+      status: "lost",
+      primaryText: "Game Over!",
+      secondaryText: "You Lose! Better Start Learning Assembly 😭",
+      backgroundColor: "firebrick",
+      display: "flex",
     },
     {
-      type: 'progress',
-      status: 'ongoing',
-      primaryText: '',
-      secondaryText: '',
-      backgroundColor: 'inherit',
-      display: 'none',
+      type: "progress",
+      status: "ongoing",
+      primaryText: "",
+      secondaryText: "",
+      backgroundColor: "inherit",
+      display: "none",
     },
   ];
   let currentObj!: progressObj;

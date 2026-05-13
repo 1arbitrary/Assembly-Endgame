@@ -1,5 +1,5 @@
-import { clsx } from 'clsx';
-import { type Language } from '../languages';
+import { clsx } from "clsx";
+import { type Language } from "../languages";
 
 export function LanguageSection({
   wrongGuesses,
@@ -11,9 +11,9 @@ export function LanguageSection({
   const LanguagesArray = languages.map((lang, idx) => (
     <button
       className={clsx(
-        'lang-btn',
-        idx < wrongGuesses && 'dead',
-        wrongGuesses === 8 && 'dead',
+        "lang-btn",
+        idx < wrongGuesses && "dead",
+        wrongGuesses === 8 && "dead",
       )}
       key={idx}
       style={{

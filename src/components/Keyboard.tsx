@@ -1,5 +1,5 @@
-import { clsx } from 'clsx';
-import { buttonPhase } from '../App';
+import { clsx } from "clsx";
+import { buttonPhase } from "../App";
 
 export function Keyboard({
   checkLetter,
@@ -8,18 +8,18 @@ export function Keyboard({
   checkLetter: (alphabet: string, idx: number) => void;
   buttonStatus: buttonPhase[];
 }) {
-  const alphabetArray: string[] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  const alphabetArray: string[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
   return (
     <div className="keyboard-div">
       {alphabetArray.map((element, idx) => (
         <button
           key={idx}
           className={clsx(
-            'keyboard-btn',
-            buttonStatus[idx] === buttonPhase.idle && 'idle',
-            buttonStatus[idx] === buttonPhase.correct && 'correct',
-            buttonStatus[idx] === buttonPhase.incorrect && 'incorrect',
-            buttonStatus[idx] === buttonPhase.highlighted && 'highlighted',
+            "keyboard-btn",
+            buttonStatus[idx] === buttonPhase.idle && "idle",
+            buttonStatus[idx] === buttonPhase.correct && "correct",
+            buttonStatus[idx] === buttonPhase.incorrect && "incorrect",
+            buttonStatus[idx] === buttonPhase.highlighted && "highlighted",
           )}
           onClick={() => checkLetter(element, idx)}
         >

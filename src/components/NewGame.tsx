@@ -1,4 +1,4 @@
-import { buttonPhase } from '../App.tsx';
+import { buttonPhase } from "../App.tsx";
 
 export function NewGame({
   newWord,
@@ -19,7 +19,7 @@ export function NewGame({
     const updatedWord: string[] = newWord();
     const keyboardSize: number = 26;
     setCurrentWord(() => updatedWord);
-    setGuessedLetters(() => new Array(updatedWord.length).fill(''));
+    setGuessedLetters(() => new Array(updatedWord.length).fill(""));
     setButtonStatus(() => new Array(keyboardSize).fill(buttonPhase.idle));
     setWrongGuesses(() => 0);
     setCurrentOccurrences(() => new Array(keyboardSize).fill(1));

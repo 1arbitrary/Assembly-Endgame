@@ -1,7 +1,7 @@
-import { useEffect, useRef } from 'react';
-import { clsx } from 'clsx';
-import { Keyboard } from './Keyboard';
-import { buttonPhase } from '../App';
+import { useEffect, useRef } from "react";
+import { clsx } from "clsx";
+import { Keyboard } from "./Keyboard";
+import { buttonPhase } from "../App";
 
 export function Input({
   buttonStatus,
@@ -27,7 +27,7 @@ export function Input({
   setWrongGuesses: (updater: (prev: number) => number) => void;
 }) {
   function assignColor(idx: number, status: buttonPhase) {
-    const isFull = guessedLetters.every((element) => element !== '');
+    const isFull = guessedLetters.every((element) => element !== "");
     if (initialVal.current[idx] !== undefined) {
       clearTimeout(initialVal.current[idx]);
       initialVal.current[idx] = undefined;
@@ -52,7 +52,7 @@ export function Input({
   }
 
   function checkLetter(alphabet: string, idx: number): void {
-    if (gameStatus === 'won' || gameStatus === 'lost') return;
+    if (gameStatus === "won" || gameStatus === "lost") return;
     const totalOccurrencesOfAlphabet: number = currentWord.filter(
       (elem) => elem === alphabet,
     ).length;
@@ -84,7 +84,7 @@ export function Input({
 
   function addLetter(alphabet: string): void {
     let indexOfAlphabet: number = currentWord.indexOf(alphabet, 0);
-    while (indexOfAlphabet !== -1 && guessedLetters[indexOfAlphabet] !== '') {
+    while (indexOfAlphabet !== -1 && guessedLetters[indexOfAlphabet] !== "") {
       indexOfAlphabet = currentWord.indexOf(alphabet, indexOfAlphabet + 1);
     }
     if (indexOfAlphabet === -1) return;
@@ -108,9 +108,9 @@ export function Input({
     return (
       <span
         key={idx}
-        className={clsx('span-input', letter === '' && 'unguessed')}
+        className={clsx("span-input", letter === "" && "unguessed")}
       >
-        {letter === '' ? currentWord[idx] : letter}
+        {letter === "" ? currentWord[idx] : letter}
       </span>
     );
   });
@@ -126,7 +126,7 @@ export function Input({
   return (
     <>
       <div className="input-div">
-        {gameStatus === 'lost' ? actualArray : currentArray}
+        {gameStatus === "lost" ? actualArray : currentArray}
       </div>
       <div className="main-keyboard-div">
         <Keyboard checkLetter={checkLetter} buttonStatus={buttonStatus} />

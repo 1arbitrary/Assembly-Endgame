@@ -19,11 +19,11 @@ Lose them all… and Assembly wins.
 
 ## 🎮 Gameplay
 
-* Guess the hidden word letter by letter
-* Correct letters reveal their position in the word
-* Incorrect guesses eliminate a programming language
-* Lose all languages → **Game Over**
-* Guess the word before that → **Victory**
+- Guess the hidden word letter by letter
+- Correct letters reveal their position in the word
+- Incorrect guesses eliminate a programming language
+- Lose all languages → **Game Over**
+- Guess the word before that → **Victory**
 
 Think **Hangman**, but the casualties are programming languages.
 
@@ -47,9 +47,9 @@ Think **Hangman**, but the casualties are programming languages.
 
 ## ⚙️ Tech Stack
 
-* **React**
-* **TypeScript (TSX)**
-* **Rspack**
+- **React**
+- **TypeScript (TSX)**
+- **Rspack**
 
 ---
 
@@ -141,25 +141,25 @@ Guess the word before **Assembly becomes the only language left standing**.
 
 Planned ideas for expanding the project:
 
-* ⏱ **Timed Guess Mode**
+- ⏱ **Timed Guess Mode**
   Add a countdown timer that forces players to guess the word within a limited time.
 
-* 🎊 **Anti-Confetti Animation on Loss**
+- 🎊 **Anti-Confetti Animation on Loss**
   Instead of celebration, trigger a playful “anti-confetti” effect when the player loses.
 
-* 💬 **Dynamic Status Messages**
+- 💬 **Dynamic Status Messages**
   Display contextual messages when players guess letters correctly.
 
-* 📚 **Word Categories**
+- 📚 **Word Categories**
   Add categories such as Programming, Technology, and General vocabulary.
 
-* 🎨 **Theme Toggle**
+- 🎨 **Theme Toggle**
   Support both light and dark mode.
 
-* 📊 **Score Tracking**
+- 📊 **Score Tracking**
   Track wins, losses, and streaks.
 
-* 📱 **Improved Mobile UI**
+- 📱 **Improved Mobile UI**
   Optimize layout and controls for smaller screens.
 
 ---

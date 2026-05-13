@@ -1,9 +1,9 @@
-import { useMemo } from 'react';
+import { useMemo } from "react";
 
-import { getFarewellObject, updateProgress } from './gameStatusConfig';
+import { getFarewellObject, updateProgress } from "./gameStatusConfig";
 
-import type { farewellObj, progressObj } from './gameStatusConfig';
-import type { Language } from '../../languages';
+import type { farewellObj, progressObj } from "./gameStatusConfig";
+import type { Language } from "../../languages";
 
 export function Status({
   wrongGuesses,
@@ -19,8 +19,8 @@ export function Status({
     const idxOfLang = wrongGuesses - 1;
     if (wrongGuesses < 8 && idxOfLang !== -1)
       return getFarewellObject(languages[idxOfLang].name);
-    if (gameStatus === 'won') return updateProgress(gameStatus);
-    if (gameStatus === 'lost') return updateProgress(gameStatus);
+    if (gameStatus === "won") return updateProgress(gameStatus);
+    if (gameStatus === "lost") return updateProgress(gameStatus);
 
     return updateProgress(gameStatus);
   }, [wrongGuesses, gameStatus, languages]);
@@ -29,8 +29,7 @@ export function Status({
     <div
       className="status-div"
       style={{
-        display:
-          evaledObj.type === 'progress' ? evaledObj.display : 'flex',
+        display: evaledObj.type === "progress" ? evaledObj.display : "flex",
       }}
     >
       <div
@@ -41,9 +40,7 @@ export function Status({
           {evaledObj.primaryText !== undefined ? evaledObj.primaryText : null}
         </p>
         <p className="status-secondary-text">
-          {evaledObj.type === 'progress'
-            ? evaledObj.secondaryText
-            : null}
+          {evaledObj.type === "progress" ? evaledObj.secondaryText : null}
         </p>
       </div>
     </div>
