@@ -109,24 +109,6 @@ bun run preview
 
 ---
 
-# 🦕 Using Deno (Experimental)
-
-Run the dev server:
-
-```bash
-deno task dev
-```
-
-Or run with npm compatibility:
-
-```bash
-deno run -A npm:rspack
-```
-
-Note: Deno support may require additional configuration depending on your environment.
-
----
-
 ## 💡 Project Idea
 
 The game is inspired by classic word-guessing games like **Hangman**, but with a programming twist.
